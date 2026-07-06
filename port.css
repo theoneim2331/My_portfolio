@@ -340,95 +340,163 @@ a{
 /* Project section ends */
 
 /* Skills Section */
+This looks great! Now that I have your complete HTML structure—including the Competitive Programming section—I can give you the exact CSS to make everything flow perfectly together.
+
+I've combined the styling for your `Frontend` and `Backend` boxes with some polished styling for your `Competitive Programming` cards so they match your black and yellow (`#f9d401`) theme seamlessly, complete with nice hover effects.
+
+Replace everything related to your Skills section in your `port.css` file with this CSS:
+
+```css
+/* ================================
+   SKILLS SECTION (Main Container)
+   ================================ */
 #skills {
-  padding: 50px 20px;
-  text-align: center;
+  padding: 80px 20px;
+  background-color: black;
+  color: white;
   position: relative;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 40px;
-}
+/* Flexbox wrapper for the top two boxes */
 .skills-container {
-  margin-left: 40px;
-  width: 400px;
-  height: 250px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 0 auto 60px auto; /* 60px bottom margin to separate from CP section */
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+/* ================================
+   FRONTEND & BACKEND BOXES
+   ================================ */
+.details {
   border: 2px solid #ffc107;
   border-radius: 25px;
-  padding: 20px;
-  line-height: 1.5;
-  gap: 20px;
+  padding: 30px;
+  width: 400px;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  transition: transform 0.3s ease;
 }
 
-.skill {
-  width: 300px;
-  text-align: left;
+.details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.1);
 }
 
-.skill h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.progress-bar {
-  background-color: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 390px;
-}
-
-.progress {
-  background-color: #ffc107;
-  height: 20px;
-  line-height: 20px;
-  color: black;
-  border: 2px solid #ffc107;
+.details .sub-title {
+  width: 100%;
   text-align: center;
-  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  color: #f9d401;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
+
+.details article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 45%; /* Puts two skills per row */
+  margin-bottom: 25px;
+}
+
+.details article h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.check-icon {
+  height: 22px;
+  width: 22px;
+}
+
+/* ================================
+   COMPETITIVE PROGRAMMING SECTION
+   ================================ */
+.cp-skill {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cp-skill h2 {
+  font-size: 2rem;
+  color: #f9d401;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+
 .cp-platforms {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 20px 0;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .platform {
   border: 2px solid #ffc107;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 15px;
+  padding: 25px 20px;
   width: 250px;
-  margin: 10px;
   text-align: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 
-.platform a{
-  color: #f6df5c;
+.platform:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 193, 7, 0.05);
 }
+
 .platform img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  /* Optional: Adds a slight yellow glow to the white icons */
+  filter: drop-shadow(0px 0px 5px rgba(255, 193, 7, 0.5));
 }
 
-.languages ul {
-  list-style: none;
-  padding: 0;
+.platform h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 
-.languages li {
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+.platform p {
+  color: #cccccc;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
-.profilelink{
+
+/* Styling the "See Profile" buttons */
+.profilelink {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  color: #f9d401;
   text-decoration: none;
-  color: #ffc107;
+  border: 1px solid #f9d401;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
+
+.profilelink:hover {
+  background-color: #f9d401;
+  color: black;
+}
+
+```
 /* skill section ends */
 
 /* contact section */
