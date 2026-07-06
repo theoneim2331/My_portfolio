@@ -254,48 +254,97 @@ a{
 /* About section ends */
 
 /* skill section */
-#Experience{
+/* ================================
+   EXPERIENCE SECTION
+   ================================ */
+#Experience {
   position: relative;
+  padding: 80px 20px;
+  text-align: center;
 }
-.sub-title{
+
+#Experience .sub-title {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 30px;
-  margin-left: 115px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin: 0 auto 40px auto; /* Centers the title properly */
+  text-align: center;
   text-decoration: underline;
+  color: #f9d401;
 }
-.exp{
+
+.exp-details-con {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.exp {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Makes both side-by-side boxes the same height */
   gap: 40px;
+  flex-wrap: wrap; /* Allows stacking safely on smaller screens */
+  width: 100%;
 }
-.text-con{
-  margin-left: 100px;
-  font-size: 20px;
-  height: 300px;
-  width: 500px;
-  border: 1.5px solid #f9d401;
-  padding: 15px;
-  gap: 30px;
-  border-radius: 8px;
-  line-height: 1.6;
+
+.text-con {
+  flex: 1 1 350px;
+  max-width: 500px;
+  border: 2px solid #f9d401;
+  padding: 30px;
+  border-radius: 15px;
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  align-content: flex-start;
+  gap: 20px 10px;
+  margin: 0; /* Removed the bad margin-left */
+  height: auto; /* Lets the box grow with the content */
 }
-.check-icon{
-  height: 25px;
-  width: 25px;
+
+.text-con article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 45%; /* Puts skills in a neat two-column grid */
+  text-align: left;
 }
-.description{
-  width: 770px;
-  border: 1.5px solid #f9d401;
-  border-radius: 8px;
-  padding: 20px;
-  line-height: 1.5;
+
+.text-con article h3 {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.text-con article p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 3px;
+}
+
+.check-icon {
+  height: 22px;
+  width: 22px;
+}
+
+.description {
+  flex: 1 1 400px;
+  max-width: 600px;
+  border: 2px solid #f9d401;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: left;
+  margin: 0;
+  height: auto;
+}
+
+/* This fixes the text overflow caused by the HTML <pre> tag */
+.description pre {
+  white-space: pre-wrap; /* Forces the text to wrap inside the box */
+  font-family: inherit; /* Makes the text match your website's font instead of monospace */
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  line-height: 1.8;
 }
 /* exp sec ends */
 
