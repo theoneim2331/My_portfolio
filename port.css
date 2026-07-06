@@ -340,16 +340,6 @@ a{
 /* Project section ends */
 
 /* Skills Section */
-This looks great! Now that I have your complete HTML structure—including the Competitive Programming section—I can give you the exact CSS to make everything flow perfectly together.
-
-I've combined the styling for your `Frontend` and `Backend` boxes with some polished styling for your `Competitive Programming` cards so they match your black and yellow (`#f9d401`) theme seamlessly, complete with nice hover effects.
-
-Replace everything related to your Skills section in your `port.css` file with this CSS:
-
-```css
-/* ================================
-   SKILLS SECTION (Main Container)
-   ================================ */
 #skills {
   padding: 80px 20px;
   background-color: black;
@@ -437,16 +427,17 @@ Replace everything related to your Skills section in your `port.css` file with t
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .platform {
+    flex: 1 1 220px;
   border: 2px solid #ffc107;
   border-radius: 15px;
   padding: 25px 20px;
-  width: 250px;
+  max-width: 260px;
   text-align: center;
   background-color: transparent;
   transition: all 0.3s ease;
@@ -496,7 +487,7 @@ Replace everything related to your Skills section in your `port.css` file with t
   color: black;
 }
 
-```
+
 /* skill section ends */
 
 /* contact section */
